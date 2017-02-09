@@ -9,7 +9,7 @@ call :ExecuteCmd {Restore}
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 2. Build and publish
-call :ExecuteCmd dotnet publish "{PROJECT}" --output "%DEPLOYMENT_TEMP%" --configuration Release
+call :ExecuteCmd {BuildAndPublish}
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 3. KuduSync

@@ -9,7 +9,7 @@ echo "Handling ASP.NET Core Web Application deployment."
 exitWithMessageOnError "Restore failed"
 
 # 2. Build and publish
-dotnet publish "{PROJECT}" --output "$DEPLOYMENT_TEMP" --configuration Release
+{BuildAndPublish}
 exitWithMessageOnError "dotnet publish failed"
 
 # 3. KuduSync
